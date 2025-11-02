@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
+// Get API base URL from environment variable or default to your backend URL
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://bloodbank-management-system-8qru.onrender.com';
+
 function App() {
   const [donors, setDonors] = useState([]);
   const [inventory, setInventory] = useState([]);
@@ -24,7 +27,7 @@ function App() {
   const fetchDonors = async () => {
     try {
       setLoading(true);
-      const response = await fetch('/api/donors');
+      const response = await fetch(`${API_BASE_URL}/api/donors`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -43,7 +46,7 @@ function App() {
   const fetchInventory = async () => {
     try {
       setLoading(true);
-      const response = await fetch('/api/inventory');
+      const response = await fetch(`${API_BASE_URL}/api/inventory`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -71,7 +74,7 @@ function App() {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await fetch('/api/donors', {
+      const response = await fetch(`${API_BASE_URL}/api/donors`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -111,7 +114,7 @@ function App() {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await fetch('/api/inventory/donate', {
+      const response = await fetch(`${API_BASE_URL}/api/inventory/donate`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
