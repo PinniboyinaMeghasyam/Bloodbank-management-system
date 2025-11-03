@@ -1,0 +1,389 @@
+.App {
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  animation: fadeIn 0.5s ease-in;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  animation: slideInFromLeft 0.5s ease-out;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #333;
+  animation: slideInFromLeft 0.7s ease-out;
+}
+
+h3 {
+  color: #555;
+  margin-top: 30px;
+  animation: slideInFromRight 0.5s ease-out;
+}
+
+form {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: left;
+  animation: fadeIn 0.8s ease-in;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  animation: fadeIn 0.3s ease-in;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  animation: slideInFromBottom 0.5s ease-out;
+}
+
+input:focus, select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+button {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+  animation: fadeIn 1s ease-in;
+}
+
+button:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:hover td {
+  background-color: #f5f5f5;
+}
+
+.first-place {
+  background-color: #fff3cd;
+  font-weight: bold;
+}
+
+.first-place td:first-child {
+  color: #ffc107;
+  font-size: 1.2em;
+}
+
+.second-place {
+  background-color: #e2e3e5;
+}
+
+.second-place td:first-child {
+  color: #6c757d;
+  font-size: 1.1em;
+}
+
+.third-place {
+  background-color: #d1ecf1;
+}
+
+.third-place td:first-child {
+  color: #17a2b8;
+  font-size: 1.1em;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  animation: shake 0.5s ease-in-out;
+}
+
+.loading {
+  text-align: center;
+  color: #007bff;
+  font-style: italic;
+  animation: pulse 1.5s infinite;
+}
+
+.top-donors {
+  margin-top: 30px;
+  animation: fadeIn 1.2s ease-in;
+}
+
+.top-donors h3 {
+  text-align: center;
+  color: #333;
+}
+
+.top-donors table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.top-donors th, .top-donors td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.top-donors th {
+  background-color: #f8f9fa;
+}
+
+/* Authentication Styles */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  animation: fadeIn 0.5s ease-in;
+}
+
+.auth-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  animation: slideInFromTop 0.5s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  animation: slideInFromLeft 0.7s ease-out;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.auth-form button {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.auth-form button:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.auth-form button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.auth-form p {
+  text-align: center;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+.auth-form a {
+  color: #dc3545;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.auth-form a:hover {
+  text-decoration: underline;
+  color: #c82333;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20%, 60% {
+    transform: translateX(-5px);
+  }
+  40%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/* Add some blood drop animations */
+.container::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  background-color: #dc3545;
+  border-radius: 50%;
+  animation: drip 3s infinite;
+  opacity: 0;
+}
+
+@keyframes drip {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
